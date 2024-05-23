@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container">
+    <div class="title">
+      <div class="verification-api-title">Circle Verite Verification API</div>
+    </div>
+    <div class="header">
+      <img class="circle-icon" src="img/circle-icon.jpg" alt="Circle Icon" />
+    </div>
+    <div class="main-body">
+      <img
+        class="verite-banner"
+        src="img/verite-banner.jpg"
+        alt="Verite Banner"
+      />
+      <%- include('../partials/signup') %> <%-include('../partials/new-token')
+      %> <%-include('../partials/revoke-token') %>
+      <%-include('../partials/legal-terms') %>
+    </div>
+    <script type="text/javascript" nonce="<%= nonce %>">
+      window.baseUrl = "<%= baseUrl %>"
+    </script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

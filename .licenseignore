@@ -1,0 +1,13 @@
+pkg:npm/borsh
+@bcoe/v8-coverage
+did-jwt-vc
+language-subtag-registry
+multiformats
+pako
+sha.js
+sprintf-js
+ethereum-dapp
+solana-dapp
+ethereum
+iniparser
+hardhat
