@@ -1,0 +1,55 @@
+{
+  "didDocument": {
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      "https://w3id.org/security/suites/ed25519-2018/v1",
+      "https://w3id.org/security/suites/x25519-2019/v1"
+    ],
+    "id": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+    "verificationMethod": [
+      {
+        "id": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+        "type": "Ed25519VerificationKey2018",
+        "controller": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+        "publicKeyMultibase": "mlbOSg0dqPl5C+F+Z7zeN22B9PyisEQVT2Nvqiegs9X8"
+      },
+      {
+        "id": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6LSin5wmyAsp96cjELwU5R9JCJ77Xd8vTfQN6bevutDCVsF",
+        "type": "X25519KeyAgreementKey2019",
+        "controller": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+        "publicKeyMultibase": "maYVkLT1k1Dd9BRxwtoZ8dUFOxE8egmwtTamdB1hhPSo"
+      }
+    ],
+    "assertionMethod": [
+      "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc"
+    ],
+    "authentication": [
+      "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc"
+    ],
+    "capabilityInvocation": [
+      "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc"
+    ],
+    "capabilityDelegation": [
+      "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc"
+    ],
+    "keyAgreement": [
+      "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6LSin5wmyAsp96cjELwU5R9JCJ77Xd8vTfQN6bevutDCVsF"
+    ]
+  },
+  "keys": [
+    {
+      "id": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+      "type": "Ed25519VerificationKey2018",
+      "controller": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+      "publicKeyMultibase": "mlbOSg0dqPl5C+F+Z7zeN22B9PyisEQVT2Nvqiegs9X8",
+      "privateKeyMultibase": "maqNJU/c/PosuQ+myj899K8lM8uqbRqy1AWSkChOuPJaVs5KDR2o+XkL4X5nvN43bYH0/KKwRBVPY2+qJ6Cz1fw"
+    },
+    {
+      "id": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc#z6LSin5wmyAsp96cjELwU5R9JCJ77Xd8vTfQN6bevutDCVsF",
+      "type": "X25519KeyAgreementKey2019",
+      "controller": "did:key:z6MkpXdcAaXoTQsSFEoERS2yuLvgZxoU3u6FN9ahd4A1Aryc",
+      "publicKeyMultibase": "maYVkLT1k1Dd9BRxwtoZ8dUFOxE8egmwtTamdB1hhPSo",
+      "privateKeyMultibase": "moFUklHcUqwjW2BaY9uo0PuEJRR40WBD9rqtz1oT9+kQ"
+    }
+  ]
+}
