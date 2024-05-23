@@ -1,0 +1,91 @@
+# Copyright 2024 Circle Internet Financial, LTD.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+services:
+  verifier_api:
+    url: "${VERIFIER_API_URL:-http://127.0.0.1:3000}"
+  issuer_api:
+    url: "${ISSUER_API_URL:-https://issuer-smokebox.circle.com}" # pointing to smoke box for local development
+
+tests:
+  verification:
+    create:
+      k6_options:
+        setupTimeout: '2m' # timeout for the setup() function
+        thresholds:
+          http_req_failed: [ 'rate<0.01' ] # http errors should be less than 1%
+        scenarios:
+          scenario:
+            executor: 'ramping-vus' # https://k6.io/docs/using-k6/scenarios/executors/ramping-vus/
+            startVUs: 1
+            stages:
+              - duration: '1m'
+                target: 10
+              - duration: '30m'
+                target: 10
+              - duration: '1m'
+                target: 1
+    offer:
+      challenge_token_url_count: 20
+      k6_options:
+        setupTimeout: '2m' # timeout for the setup() function
+        thresholds:
+          http_req_failed: [ 'rate<0.01' ] # http errors should be less than 1%
+        scenarios:
+          scenario:
+            executor: 'ramping-vus' # https://k6.io/docs/using-k6/scenarios/executors/ramping-vus/
+            startVUs: 1
+            stages:
+              - duration: '1m'
+                target: 10
+              - duration: '30m'
+                target: 10
+              - duration: '1m'
+                target: 1
+    submit:
+      verifiable_credential_count: 20
+      k6_options:
+        setupTimeout: '2m' # timeout for the setup() function
+        thresholds:
+          http_req_failed: [ 'rate<0.01' ] # http errors should be less than 1%
+        scenarios:
+          scenario:
+            executor: 'ramping-vus' # https://k6.io/docs/using-k6/scenarios/executors/ramping-vus/
+            startVUs: 1
+            stages:
+              - duration: '1m'
+                target: 10
+              - duration: '30m'
+                target: 10
+              - duration: '1m'
+                target: 1
+    end_to_end:
+      verifiable_credential_count: 20
+      k6_options:
+        setupTimeout: '2m' # timeout for the setup() function
+        thresholds:
+          http_req_failed: [ 'rate<0.01' ] # http errors should be less than 1%
+        scenarios:
+          scenario:
+            executor: 'ramping-vus' # https://k6.io/docs/using-k6/scenarios/executors/ramping-vus/
+            startVUs: 1
+            stages:
+              - duration: '1m'
+                target: 10
+              - duration: '30m'
+                target: 10
+              - duration: '1m'
+                target: 1

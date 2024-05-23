@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Build artifacts
+dist
+
+# Test output
+coverage
+
+# Deployment
+circle-helm-charts
+circle-terraform
+**/Chart.lock
+**/.terraform
+kubeconfig_*
+deploy/helm/verity-verifier/charts/

@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# This script sets up the local environment for development. It is safe to
+# run this script multiple times.  This should be run when you first check
+# out the project.
+
+# Compile test contracts
+echo "Compiling Solidity contracts..."
+npm run compile
+
+# Generate type bindings
+echo "Generating type bindings for smartcontracts..."
+npm run hardhat-typechain

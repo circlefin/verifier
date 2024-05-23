@@ -1,0 +1,57 @@
+{
+  "didDocument": {
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      "https://w3id.org/security/suites/jws-2020/v1"
+    ],
+    "id": "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU",
+    "verificationMethod": [
+      {
+        "id": "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU",
+        "type": "JsonWebKey2020",
+        "controller": "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU",
+        "publicKeyJwk": {
+          "kty": "EC",
+          "crv": "secp256k1",
+          "x": "agWS94QIY0J0oNwZ7iJqDR7AOEXHmHMI4m88Qq9J6F8",
+          "y": "ZawjKP2ycXrPSOuvQdgn0IUdLBcm7Owza8dVzgw-x2Q"
+        }
+      }
+    ],
+    "assertionMethod": [
+      "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU"
+    ],
+    "authentication": [
+      "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU"
+    ],
+    "capabilityInvocation": [
+      "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU"
+    ],
+    "capabilityDelegation": [
+      "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU"
+    ],
+    "keyAgreement": [
+      "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU"
+    ]
+  },
+  "keys": [
+    {
+      "id": "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU#zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU",
+      "type": "JsonWebKey2020",
+      "controller": "did:key:zQ3shUYeuHupkTB38kqqSqzhyqXix4MLjJ8xbydrdQBbruqKU",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "crv": "secp256k1",
+        "x": "agWS94QIY0J0oNwZ7iJqDR7AOEXHmHMI4m88Qq9J6F8",
+        "y": "ZawjKP2ycXrPSOuvQdgn0IUdLBcm7Owza8dVzgw-x2Q"
+      },
+      "privateKeyJwk": {
+        "kty": "EC",
+        "crv": "secp256k1",
+        "x": "agWS94QIY0J0oNwZ7iJqDR7AOEXHmHMI4m88Qq9J6F8",
+        "y": "ZawjKP2ycXrPSOuvQdgn0IUdLBcm7Owza8dVzgw-x2Q",
+        "d": "PPkMfPaTKKQ5kgH0vAEo8ts6Jn3NjSBiDHJ7vKPEZdo"
+      }
+    }
+  ]
+}

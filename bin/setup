@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+# This script sets up the local environment for development. It is safe to
+# run this script multiple times.  This should be run when you first check
+# out the project.
+
+# Install dependencies
+echo "Installing dependencies..."
+npm install
+
+# Run setup on all workspaces
+npm run setup --workspaces --if-present
