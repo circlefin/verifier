@@ -1,0 +1,12 @@
+[programs.localnet]
+verity = "HGzMrtmwPrgSLy9Y9YM9JC1QXSwpJyMVEivm62yqfzcZ"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "npx jest"

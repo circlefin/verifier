@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["tracing"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// todo Fei: chainId (or chainIdReference) is not necessarily a number. Please refer to https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-2.md#specification. Ticket: https://circlepay.atlassian.net/browse/VR-195.
+model Verification {
+  id                     String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  challenge              String    @default(dbgenerated("gen_random_uuid()")) @map("challenge") @db.Uuid
+  network                String
+  chainId                Int?      @map("chain_id")
+  registryAddress        String?   @map("registry_address")
+  name                   String?
+  version                String?
+  subject                String
+  presentationDefinition Json      @map("presentation_definition")
+  credentialSubmission   Json?     @map("credential_submission")
+  verificationResult     Json?     @map("verification_result")
+  signature              String?
+  status                 String    @default("created")
+  statusDetail           String?   @map("status_detail")
+  offeredAt              DateTime  @default(now()) @map("offered_at")
+  submittedAt            DateTime? @map("submitted_at")
+  verifiedAt             DateTime? @map("verified_at")
+
+  @@map("verifications")
+}
+
+model User {
+  @@map("users")
+
+  did               String @id
+  legalTermVersion  Int
+  createdAt         DateTime @default(now())
+  acceptedAt        DateTime @default(now())
+  clients           ApiClient[]
+}
+
+model ApiClient {
+  @@map("api_clients")
+
+  id                String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user              User @relation(fields: [did], references: [did])
+  did               String
+  createdAt         DateTime @default(now())
+  expiresInSeconds  Int
+  revokedAt         DateTime?
+  revokedReason     String? @db.VarChar(200)
+  revokedBy         String?
+
+  @@index(did)
+  @@index(revokedAt)
+}
+

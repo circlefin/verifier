@@ -1,0 +1,26 @@
+{
+  "name": "verite-verifier",
+  "private": true,
+  "engines": {
+    "node": "16.x",
+    "npm": ">=7.0.0"
+  },
+  "scripts": {
+    "build": "npm run build -w verifier; npm run build --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "dev": "npm run dev -w verifier",
+    "lint": "npm run lint --workspaces --if-present",
+    "setup": "./bin/setup",
+    "start": "npm start -w verifier",
+    "start:tracing": "npm run start:tracing -w verifier",
+    "start:tracing:inspect": "npm run start:tracing:inspect -w verifier",
+    "test": "npm run build -w verifier; npm run test --workspaces --if-present",
+    "type-check": "npm run type-check --workspaces --if-present"
+  },
+  "workspaces": [
+    "./packages/*"
+  ],
+  "devDependencies": {
+    "@types/secp256k1": "^4.0.4"
+  }
+}
