@@ -21,7 +21,7 @@ import { ClientOptions } from "hot-shots"
 export const statsDConfig: ClientOptions = {
   host: process.env.STATSD_HOST || "localhost",
   port: 8125,
-  prefix: "circle.verite-verifier.",
+  prefix: "verite.verifier.",
   mock: !["prod", "sandbox", "stg", "smokebox", "testing"].includes(
     process.env.ENV || ""
   ),

@@ -568,7 +568,7 @@ const SubmitVerification: FC<SubmitVerificationParams> = ({
             expiration: new BN(
               verificationResult.verificationResult.expiration
             ),
-            schema: "centre.io/credentials/kyc"
+            schema: ""
           },
           {
             accounts: {

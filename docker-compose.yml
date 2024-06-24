@@ -17,13 +17,13 @@
 version: "2.3"
 
 services:
-  verity-verifier-build:
-    image: verity-verifier-build
+  verifier-build:
+    image: verifier-build
     build:
       context: .
       target: build
-  verity-verifier:
-    image: verity-verifier
+  verifier:
+    image: verifier
     build:
       context: .
     environment:
@@ -35,36 +35,36 @@ services:
       - ./packages/verifier/.env
     ports:
       - 3000:3000
-    command: "/usr/local/circle/start.sh"
+    command: "/usr/local/verifier/start.sh"
     depends_on:
       postgres:
         condition: service_healthy
   migrations:
-    image: verity-verifier-build
+    image: verifier-build
     environment:
       DB_HOST: postgres
       MIGRATE_DB_USER: &miguser dba
-      MIGRATE_DB_PASSWORD: &migpass "T3ndren!!"
+      MIGRATE_DB_PASSWORD: &migpass "TestPassWord!!"
     env_file:
       - ./packages/verifier/.env
-    command: "/usr/local/circle/migrate.sh"
+    command: "/usr/local/verifier/migrate.sh"
     depends_on:
       postgres:
         condition: service_healthy
   test:
-    image: verity-verifier-build
+    image: verifier-build
     environment:
       DB_HOST: postgres
     env_file:
       - ./packages/verifier/.env
-    command: "/usr/local/circle/test.sh"
+    command: "/usr/local/verifier/test.sh"
     depends_on:
       migrations:
         condition: service_started
       postgres:
         condition: service_healthy
   postgres:
-    image: "514563129364.dkr.ecr.us-east-1.amazonaws.com/circle-dockerhub/postgres:14-latest"
+    image: "postgres:14"
     environment:
       POSTGRES_PASSWORD: *migpass
       POSTGRES_USER: *miguser

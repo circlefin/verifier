@@ -1,6 +1,6 @@
 # API Routes
 
-The API routes are defined in [`packages/verifier/src/lib/routes.ts`](https://github.com/circlefin/verity-verifier/blob/master/packages/verifier/src/lib/routes.ts).
+The API routes are defined in [`packages/verifier/src/lib/routes.ts`](https://github.com/circlefin/verifier/blob/master/packages/verifier/src/lib/routes.ts).
 
 ## General
 
@@ -39,11 +39,11 @@ All error responses are in the following format, which supports multiple errors 
 
 ## Endpoints
 
-- [GET /ping](https://github.com/circlefin/verity-verifier/blob/master/docs/API.md#get-ping)
-- [POST /verifications](https://github.com/circlefin/verity-verifier/blob/master/docs/API.md#post-verifications)
-- [GET /verifications/:id](https://github.com/circlefin/verity-verifier/blob/master/docs/API.md#get-verificationsid)
-- [POST /verifications/:id](https://github.com/circlefin/verity-verifier/blob/master/docs/API.md#post-verificationsid)
-- [GET /verifications/:id/status](https://github.com/circlefin/verity-verifier/blob/master/docs/API.md#get-verificationsidstatus)
+- [GET /ping](https://github.com/circlefin/verifier/blob/master/docs/API.md#get-ping)
+- [POST /verifications](https://github.com/circlefin/verifier/blob/master/docs/API.md#post-verifications)
+- [GET /verifications/:id](https://github.com/circlefin/verifier/blob/master/docs/API.md#get-verificationsid)
+- [POST /verifications/:id](https://github.com/circlefin/verifier/blob/master/docs/API.md#post-verificationsid)
+- [GET /verifications/:id/status](https://github.com/circlefin/verifier/blob/master/docs/API.md#get-verificationsidstatus)
 
 ---
 
@@ -68,7 +68,7 @@ All error responses are in the following format, which supports multiple errors 
 
 **Description:** Create a new verification offer. This is the first step in the [verification flow](https://verite.id/docs/patterns/verification-flow#verification-flow). This endpoint is called by a 3rd party service (for example, a dApp) and returns a `challengeTokenUrl` , which will be presented to the end-user (for example, as a QR code). The `challengeTokenUrl` will contain the verification offer for the end-user to access. The response also contains `statusUrl` which the dApp can poll to check the status of the verification.
 
-There are four optional parameters: chainId, name, version, and registryAddress. These correspond to the [EIP-712 domain separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator). While these parameters are optional, their necessity is dependent on the specific implementation of the smart contract you intend to interact with. To provide the most support, the Verifier API allows you to set them as needed. However, if using the sample Verite smart contracts, e.g. as is the [TestRegistry](https://github.com/circlefin/verity-verifier/blob/master/packages/ethereum/contracts/TestRegistry.sol), all the parameters will be required.
+There are four optional parameters: chainId, name, version, and registryAddress. These correspond to the [EIP-712 domain separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator). While these parameters are optional, their necessity is dependent on the specific implementation of the smart contract you intend to interact with. To provide the most support, the Verifier API allows you to set them as needed. However, if using the sample Verite smart contracts, e.g. as is the [TestRegistry](https://github.com/circlefin/verifier/blob/master/packages/ethereum/contracts/TestRegistry.sol), all the parameters will be required.
 
 This endpoint requires the dApp to know the end-user’s address, so it will likely be called after the end-user’s wallet is connected.
 
@@ -86,7 +86,7 @@ This endpoint requires the dApp to know the end-user’s address, so it will lik
   | `name` | No | The name used in the contract's EIP-712 domain separator. Defaults to "VerificationRegistry" as found in the Verite reference contracts.
   | `version` | No | The version used in the contract's EIP-712 domain separator. Defaults to "1.0" as found in the Verite reference contracts.
   | `registryAddress` | No | The verifyingContract used in the contractor's EIP-712 domain separator. This is the address of the deployed registry. Only used for `ethereum` |
-- Sample Ethereum Body using [TestRegistry](https://github.com/circlefin/verity-verifier/blob/master/packages/ethereum/contracts/TestRegistry.sol):
+- Sample Ethereum Body using [TestRegistry](https://github.com/circlefin/verifier/blob/master/packages/ethereum/contracts/TestRegistry.sol):
 
 ```json
 {
@@ -99,7 +99,7 @@ This endpoint requires the dApp to know the end-user’s address, so it will lik
 }
 ```
 
-- Sample Solana Body using [verite program](https://github.com/circlefin/verity-verifier/blob/master/packages/solana/programs/verity/src/lib.rs):
+- Sample Solana Body using [verite program](https://github.com/circlefin/verifier/blob/master/packages/solana/programs/verity/src/lib.rs):
 
 ```json
 {
@@ -274,7 +274,7 @@ eyJhbGciOiJFUzI1NksiLCJ0eXAiOiJKV1QifQ.eyJ2cCI6eyJAY29udGV4dCI6WyJodHRwczovL3d3d
 {
   "status": "approved",
   "verificationResult": {
-    "schema": "centre.io/credentials/kyc",
+    "schema": "",
     "subject": "0xB5de987Ccce0BD596c22939B6f1e2a124e62B232",
     "expiration": 1645113992
   },
@@ -311,7 +311,7 @@ eyJhbGciOiJFUzI1NksiLCJ0eXAiOiJKV1QifQ.eyJ2cCI6eyJAY29udGV4dCI6WyJodHRwczovL3d3d
 {
   "status": "approved",
   "verificationResult": {
-    "schema": "centre.io/credentials/kyc",
+    "schema": "",
     "subject": "0xB5de987Ccce0BD596c22939B6f1e2a124e62B232",
     "expiration": 1645113992
   },

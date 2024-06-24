@@ -14,7 +14,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-ARG BASE_IMAGE=514563129364.dkr.ecr.us-east-1.amazonaws.com/circle-base/node:16.14.0-alpine
+ARG BASE_IMAGE=node:22.3.0-alpine
 
 # Build
 FROM ${BASE_IMAGE} AS build
@@ -44,7 +44,7 @@ WORKDIR /verifier
 RUN addgroup -g 9999 circle \
   && adduser circle circle
 
-COPY --from=build /usr/local/circle /usr/local/circle
+COPY --from=build /usr/local/verifier /usr/local/verifier
 COPY --from=build /verifier/node_modules ./node_modules
 COPY --from=build /verifier/package.json ./package.json
 COPY --from=build /verifier/packages/verifier/dist ./packages/verifier/dist
@@ -58,4 +58,4 @@ USER circle
 # npm fails to run if it can't contact its configured registry
 RUN echo "registry=http://none" > /home/circle/.npmrc
 
-CMD [ "/usr/local/circle/start.sh" ]
+CMD [ "/usr/local/verifier/start.sh" ]

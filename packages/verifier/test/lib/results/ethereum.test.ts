@@ -175,7 +175,7 @@ test("recovering verifier address used to create the signature", () => {
     ]
   }
   const verificationResult = {
-    schema: "centre.io/credentials/kyc",
+    schema: "",
     subject: "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
     expiration: expiration
   }

@@ -12,9 +12,9 @@ npm install
 
 ## Setup
 
-This dapp requires a running validator and the program deployed. You can find [instructions for how to do that](https://github.com/circlefin/verity-verifier/blob/master/packages/solana/README.md#deployment) in the `solana` package.
+This dapp requires a running validator and the program deployed. You can find [instructions for how to do that](https://github.com/circlefin/verifier/blob/master/packages/solana/README.md#deployment) in the `solana` package.
 
-You should also start an instance of the verifier on port 3000 (the default) found in [packages/verifier](https://github.com/circlefin/verity-verifier/tree/master/packages/verifier).
+You should also start an instance of the verifier on port 3000 (the default) found in [packages/verifier](https://github.com/circlefin/verifier/tree/master/packages/verifier).
 
 ## Anchor
 

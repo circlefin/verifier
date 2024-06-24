@@ -86,7 +86,7 @@ describe("verity", () => {
       cluster: "localnet",
       subject: subject.publicKey,
       expiration: new anchor.BN(2644257401),
-      schema: "centre.io/credentials/kyc"
+      schema: ""
     }
 
     // Serialize the verification result using Borsh.
@@ -149,7 +149,7 @@ describe("verity", () => {
       cluster: "localnet",
       subject: subject.publicKey,
       expiration: new anchor.BN(2644257401),
-      schema: "centre.io/credentials/kyc"
+      schema: ""
     }
 
     // Serialize the verification result using Borsh.
