@@ -93,6 +93,7 @@ npm test
 
 ## E2E Examples
 
+
 The Verite Verifier is simply a verifier. At minimum, demos should demonstrate verification of an already issued credential and finally demonstrate that it could be used on chain with a minimal contract. Consequently, this project does not include an issuer or identity wallet. Instead, e2e demos create and present credentials as needed. Additionally, contracts are designed to demonstrate the verification behavior, without any particular utility.
 
 There are automated tests demonstrating the behaviors of the service end-to-end across both [Ethereum](https://github.com/circlefin/verifier/tree/master/packages/ethereum) and [Solana](https://github.com/circlefin/verifier/tree/master/packages/solana) blockchains. These projects' test cases include VerificationResults and signatures generated from the verifier to demonstrate end-to-end success.
