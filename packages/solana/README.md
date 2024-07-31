@@ -53,7 +53,7 @@ The demo program includes a single trusted verifier hard-coded in the program. A
 The project uses the verifier as defined in the verifier package's `.env.example`. If you wanted to use a different validator, we have provided a Hardhat task to generate an appropriate secp256k1 public key for the Solana contract. You will need to run the following command from the `/packages/ethereum` directory. Simply provide the private key, with or without the hex prefix, to the `secp256k1pubkey` task to return the result. Below is an example.
 
 ```
-[/verity-verifier/packages/ethereum] npx hardhat secp256k1pubkey 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+[/verifier/packages/ethereum] npx hardhat secp256k1pubkey 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 Public Key (uncompressed):  Uint8Array(64) [
   131,  24,  83,  91,  84,  16, 93,  74, 122, 174,  96,
   192, 143, 196,  95, 150, 135, 24,  27,  79, 223, 198,

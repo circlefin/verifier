@@ -177,7 +177,7 @@ In order to test the verifier package, the verite package must be built and the 
 
 ## API Endpoints
 
-See [docs/API.md](https://github.com/circlefin/verity-verifier/tree/master/docs/API.md)
+See [docs/API.md](https://github.com/circlefin/verifier/tree/master/docs/API.md)
 
 ## Generating a Verifier Private Key
 
@@ -185,7 +185,7 @@ A verifier is no different than any other Ethereum wallet.
 
 The project comes packaged with an example verifier. The private key is generated with the mnemonic `test test test test test test test test test test test junk` and should not be used.
 
-You will want to generate one according to your company's best practices. The private key is a secret and should be handled accordingly. For deployment, your private key should be added as an [environment variable](https://github.com/circlefin/verity-verifier/tree/master/packages/verifier#environment-variables).
+You will want to generate one according to your company's best practices. The private key is a secret and should be handled accordingly. For deployment, your private key should be added as an [environment variable](https://github.com/circlefin/verifier/tree/master/packages/verifier#environment-variables).
 
 Below is an example of generating a random wallet using ethers:
 

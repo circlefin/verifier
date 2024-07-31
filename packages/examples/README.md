@@ -265,7 +265,7 @@ The response for a successful submission will look like the following:
 {
   "status": "success",
   "verificationResult": {
-    "schema": "centre.io/credentials/kyc",
+    "schema": "",
     "subject": "0xB5de987Ccce0BD596c22939B6f1e2a124e62B232",
     "expiration": 1643906776
   },

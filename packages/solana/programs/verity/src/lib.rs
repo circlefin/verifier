@@ -1,4 +1,4 @@
-// Copyright 2024 Circle Internet Financial, LTD.  All rights reserved.
+// Copyright 2024 Circle Internet Group, Inc.  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -61,7 +61,7 @@ pub mod verity {
         // different cluster. This will ensure a Verification Result intended
         // for localnet, or for testing, cannot be elevated to a production
         // environment. You can find more details in the README.
-        // https://github.com/circlefin/verity-verifier/tree/master/packages/solana#domain-separator
+        // https://github.com/circlefin/verifier/tree/master/packages/solana#domain-separator
         require!(
             verification_result.cluster == "localnet",
             ErrorCode::InvalidCluster
@@ -86,7 +86,7 @@ pub mod verity {
 
         // Require that the schema is KYC
         require!(
-            verification_result.schema == "centre.io/credentials/kyc",
+            verification_result.schema == "",
             ErrorCode::InvalidSchema
         );
 

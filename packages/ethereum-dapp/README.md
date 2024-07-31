@@ -18,7 +18,7 @@ No gas is required to exercise this demo. Since no state is changed, the transac
 
 ## Setup
 
-This dapp requires a running ethereum node and the contract deployed. You can find [instructions for how to do that](https://github.com/circlefin/verity-verifier/blob/master/packages/ethereum/README.md#deployment-and-managing-the-registry) in the `ethereum` package.
+This dapp requires a running ethereum node and the contract deployed. You can find [instructions for how to do that](https://github.com/circlefin/verifier/blob/master/packages/ethereum/README.md#deployment-and-managing-the-registry) in the `ethereum` package.
 
 The issuer in this demo is `did:key:z6MknHapzEyBbfzUr6n8nxwQhAwFpPM4NBEEUwja2XtAXubF` and needs to be added as a trusted issuer in the verifier. Update `packages/verifier/.env` to include the issuer:
 
@@ -26,7 +26,7 @@ The issuer in this demo is `did:key:z6MknHapzEyBbfzUr6n8nxwQhAwFpPM4NBEEUwja2XtA
 TRUSTED_ISSUERS="^did:key:z6MknHapzEyBbfzUr6n8nxwQhAwFpPM4NBEEUwja2XtAXubF$"
 ```
 
-You should also start an instance of the verifier on port 3000 (the default) found in [packages/verifier](https://github.com/circlefin/verity-verifier/tree/master/packages/verifier#quick-start).
+You should also start an instance of the verifier on port 3000 (the default) found in [packages/verifier](https://github.com/circlefin/verifier/tree/master/packages/verifier#quick-start).
 
 ## Getting Started
 

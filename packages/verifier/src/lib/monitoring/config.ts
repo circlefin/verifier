@@ -1,5 +1,5 @@
 /**
- * Copyright 2024 Circle Internet Financial, LTD.  All rights reserved.
+ * Copyright 2024 Circle Internet Group, Inc.  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import { ClientOptions } from "hot-shots"
 export const statsDConfig: ClientOptions = {
   host: process.env.STATSD_HOST || "localhost",
   port: 8125,
-  prefix: "circle.verite-verifier.",
+  prefix: "verite.verifier.",
   mock: !["prod", "sandbox", "stg", "smokebox", "testing"].includes(
     process.env.ENV || ""
   ),

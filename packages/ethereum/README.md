@@ -1,6 +1,6 @@
 # Ethereum Sample Contract
 
-This package contains a sample Ethereum contract that implements the Verite Smart Contract Patterns as designed by Centre.
+This package contains a sample Ethereum contract that implements the Verite Smart Contract Patterns as designed by Centre (now Circle).
 
 The contract is intended to demonstrate this pattern with a minimal solution. The sample `TestRegistry` simply inherits from the `VerificationRegistry` reference contract provided by Verite. Additionally, a single `validate` method is defined, allowing a Dapp to call it with a VerificationResult and the signature, both values returned from the Verifier.
 
@@ -10,8 +10,8 @@ If the trusted verifier is recovered from the verification result and signature,
 
 There are two ways to exercise this contract and demonstrate e2e acceptance:
 
-1. The [`packages/ethereum-dapp`](https://github.com/circlefin/verity-verifier/tree/master/packages/ethereum-dapp) can be used for e2e acceptance. This is a streamlined example that mocks out the issuer and wallet in the browser.
-2. You can find instructions for how to [integrate with the Verite samples provided by Centre](https://github.com/circlefin/verity-verifier/blob/master/docs/integrating_with_centre.md). Such integration demonstrates E2E of the verifier, while also demonstrating how it can be seamlessly integrated with an existing issuer, wallet, dapp, and smart contract.
+1. The [`packages/ethereum-dapp`](https://github.com/circlefin/verifier/tree/master/packages/ethereum-dapp) can be used for e2e acceptance. This is a streamlined example that mocks out the issuer and wallet in the browser.
+2. You can find instructions for how to [integrate with the Verite samples provided by Centre (now Circle)](https://github.com/circlefin/verifier/blob/master/docs/integrating_with_centre.md). Such integration demonstrates E2E of the verifier, while also demonstrating how it can be seamlessly integrated with an existing issuer, wallet, dapp, and smart contract.
 
 ## Installation
 

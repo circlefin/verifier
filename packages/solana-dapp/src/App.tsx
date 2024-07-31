@@ -1,5 +1,5 @@
 /**
- * Copyright 2024 Circle Internet Financial, LTD.  All rights reserved.
+ * Copyright 2024 Circle Internet Group, Inc.  All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -568,7 +568,7 @@ const SubmitVerification: FC<SubmitVerificationParams> = ({
             expiration: new BN(
               verificationResult.verificationResult.expiration
             ),
-            schema: "centre.io/credentials/kyc"
+            schema: ""
           },
           {
             accounts: {

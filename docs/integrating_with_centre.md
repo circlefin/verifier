@@ -1,11 +1,11 @@
-# Integrating with Centre's Open Source Verite Project
+# Integrating with Centre (now Circle)'s Open Source Verite Project
 
 ## 0. Getting Started
 
 First, find your local IP address. For example `192.168.7.31`. You will use
 this in a few places.
 
-## 1. Clone and set up Centre's Verite project
+## 1. Clone and set up Centre (now Circle)'s Verite project
 
 ```sh
 git clone git@github.com:centrehq/verite.git
@@ -156,7 +156,7 @@ And finally, in `packages/e2e-demo/pagges/demos/verifier/[type].tsx`, change the
 
 ## 4. Now the demos should work while using the Circle Verifier
 
-Start Centre demos:
+Start Centre (now Circle) demos:
 
 ### 1. Start an ethereum node
 
