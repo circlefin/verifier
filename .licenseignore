@@ -1,1 +1,13 @@
-pkg:npm/borsh
+pkg:npm/borsh@%5E0.2.2
+pkg:npm/%40bcoe/v8-coverage@%5E0.2.3
+pkg:npm/did-jwt-vc@%5E4.0.4
+pkg:npm/language-subtag-registry@~0.3.2
+pkg:npm/multiformats@%5E9.4.10
+pkg:npm/pako@%5E2.0.3
+pkg:npm/sha.js@%5E2.4.0
+pkg:npm/sprintf-js@~1.0.2
+pkg:npm/ethereum-dapp
+pkg:npm/solana-dapp
+pkg:npm/ethereum
+pkg:npm/iniparser@~1.0.5
+pkg:npm/hardhat@%5E2.0.0
