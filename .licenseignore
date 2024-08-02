@@ -1,5 +1,5 @@
 pkg:npm/borsh@%5E0.2.2
-pkg:npm/@bcoe/v8-coverage@%5E0.2.3
+pkg:npm/%40bcoe/v8-coverage@%5E0.2.3
 pkg:npm/did-jwt-vc@%5E4.0.4
 pkg:npm/language-subtag-registry@~0.3.2
 pkg:npm/multiformats@%5E9.4.10
