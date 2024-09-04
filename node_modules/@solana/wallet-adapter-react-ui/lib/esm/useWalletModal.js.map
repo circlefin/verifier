@@ -1,0 +1,1 @@
+{"version":3,"file":"useWalletModal.js","sourceRoot":"","sources":["../../src/useWalletModal.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,UAAU,EAAE,MAAM,OAAO,CAAC;AAOlD,MAAM,CAAC,MAAM,kBAAkB,GAAG,aAAa,CAA0B,EAA6B,CAAC,CAAC;AAExG,MAAM,UAAU,cAAc;IAC1B,OAAO,UAAU,CAAC,kBAAkB,CAAC,CAAC;AAC1C,CAAC"}

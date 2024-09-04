@@ -1,0 +1,117 @@
+{
+  "version": "0.1.0",
+  "name": "verity",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "subject",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "clock",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "signature",
+          "type": {
+            "array": [
+              "u8",
+              64
+            ]
+          }
+        },
+        {
+          "name": "recoveryId",
+          "type": "u8"
+        },
+        {
+          "name": "verificationResult",
+          "type": {
+            "defined": "VerificationResult"
+          }
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "VerificationResult",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "type": "string"
+          },
+          {
+            "name": "cluster",
+            "type": "string"
+          },
+          {
+            "name": "subject",
+            "type": "publicKey"
+          },
+          {
+            "name": "expiration",
+            "type": "i64"
+          },
+          {
+            "name": "schema",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NotOk"
+    },
+    {
+      "code": 6001,
+      "name": "Invalid"
+    },
+    {
+      "code": 6002,
+      "name": "SubjectMismatch"
+    },
+    {
+      "code": 6003,
+      "name": "SubjectIsNotSigner"
+    },
+    {
+      "code": 6004,
+      "name": "Expired"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidSchema"
+    },
+    {
+      "code": 6006,
+      "name": "InvalidName"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidVersion"
+    },
+    {
+      "code": 6008,
+      "name": "InvalidCluster"
+    }
+  ],
+  "metadata": {
+    "address": "HGzMrtmwPrgSLy9Y9YM9JC1QXSwpJyMVEivm62yqfzcZ"
+  }
+}

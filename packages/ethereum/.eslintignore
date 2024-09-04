@@ -1,0 +1,22 @@
+# Items listed in this file are ignored by ESLint
+
+# Dependencies
+node_modules
+
+# Build artifacts
+dist
+
+# Test
+coverage
+jest.config.ts
+
+# ESLint configuration
+.eslintrc.js
+
+# Babel
+babel.config.js
+
+# Hardhat
+hardhat.config.ts
+
+types/**
